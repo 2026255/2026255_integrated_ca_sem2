@@ -1,0 +1,84 @@
+{
+  "dataset": {
+    "files": 10,
+    "csv_gb": 6.41,
+    "bronze_rows": 16233002,
+    "silver_rows": 16232929,
+    "sample_rows": 813648,
+    "cap_per_group": 40000
+  },
+  "legacy_baseline": {
+    "disk_gb": 6.41,
+    "projected_mem_gb": 94.6,
+    "projected_load_min": 9.3,
+    "machine_ram_gb": 7.9,
+    "available_gb": 3.2,
+    "single_file_rows": 331125,
+    "memory_multiplier": 14.8,
+    "rows_loaded_single_node": 5245725,
+    "pct_of_corpus": 32.3,
+    "stopped_at": "Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv after 5,245,725 rows",
+    "elapsed_min": 2.0,
+    "chunk_rows": 100000
+  },
+  "defects": {
+    "D1_header_rows": 59,
+    "D5_duplicates": 4243106,
+    "D6_inf_nan_columns": 2,
+    "D6_inf_nan_cells": 191520,
+    "D7_negative_duration": 0,
+    "D7a_out_of_window": 14,
+    "bronze_rows": 16233002,
+    "silver_rows": 16232929
+  },
+  "m1_storage": [
+    {
+      "format": "CSV raw",
+      "gb": 6.41,
+      "write_s": NaN,
+      "vs_csv": "1.0x"
+    },
+    {
+      "format": "Parquet bronze",
+      "gb": 2.39,
+      "write_s": 441.4,
+      "vs_csv": "2.68x"
+    },
+    {
+      "format": "Parquet silver partitioned",
+      "gb": 1.88,
+      "write_s": 541.0,
+      "vs_csv": "3.42x"
+    }
+  ],
+  "m2_read_performance": [
+    {
+      "query": "row count (parquet: footer metadata only)",
+      "csv_s": 322.1,
+      "parquet_s": 1.0,
+      "speedup": "323.3x"
+    },
+    {
+      "query": "single column max (projection, 1 col of 80)",
+      "csv_s": 319.36,
+      "parquet_s": 0.83,
+      "speedup": "383.9x"
+    },
+    {
+      "query": "filter one day (partition pruning)",
+      "csv_s": 321.57,
+      "parquet_s": 0.12,
+      "speedup": "2770.9x"
+    },
+    {
+      "query": "filter + mean on non-partition col (full scan both)",
+      "csv_s": 318.31,
+      "parquet_s": 1.46,
+      "speedup": "217.4x"
+    }
+  ],
+  "spark": {
+    "version": "3.5.9",
+    "cores": 4
+  }
+}
