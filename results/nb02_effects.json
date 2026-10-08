@@ -1,0 +1,14 @@
+{
+  "arch_effect": {
+    "p1_naive": 0.2261,
+    "p2_corrected": 0.31,
+    "p3_zeroday": 0.3129
+  },
+  "protocol_effect": {
+    "A1_MLP": 0.0526,
+    "A2_CNN1D": 0.0243,
+    "A3_AutoEncoder": 0.1111
+  },
+  "ratio": 0.22,
+  "seed_sd": 0.0211
+}

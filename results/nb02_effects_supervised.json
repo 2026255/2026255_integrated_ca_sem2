@@ -1,0 +1,28 @@
+{
+  "grid": {
+    "p1_naive": {
+      "A1_MLP": 0.9182,
+      "A2_CNN1D": 0.9283
+    },
+    "p2_corrected": {
+      "A1_MLP": 0.8987,
+      "A2_CNN1D": 0.9046
+    },
+    "p3_zeroday": {
+      "A1_MLP": 0.8656,
+      "A2_CNN1D": 0.904
+    }
+  },
+  "arch_effect": {
+    "p1_naive": 0.0101,
+    "p2_corrected": 0.0059,
+    "p3_zeroday": 0.0384
+  },
+  "protocol_effect": {
+    "A1_MLP": 0.0526,
+    "A2_CNN1D": 0.0243
+  },
+  "ratio": 2.12,
+  "seed_sd": 0.0027,
+  "all_arch_ratio": 0.22
+}
