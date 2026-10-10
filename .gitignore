@@ -1,12 +1,2 @@
 datasets/
-REFERENCES.md
-EXPERIMENT_DESIGN.md
-verify_env.py
 lakehouse/
-.ipynb_checkpoints/
-
-cell_*_replacement.py
-NOTEBOOK01_REVIEW.md
-
-
-ITERATION_LOG.md 
